@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div style="display: flex; flex-direction: column; justify-content: center;">
+      <pre id="data" style="text-align: center;"></pre>
+    </div>
+    <script type="text/javascript">
+      const params = (new URL(window.location)).searchParams;
+      const text = params.entries().map(([key, value]) => `${key}: ${value}`).join('\n');
+      document.getElementById("data").innerHTML = text;
+    </script>
+  </body>
+</html>
