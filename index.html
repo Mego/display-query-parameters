@@ -7,7 +7,7 @@
     </div>
     <script type="text/javascript">
       const params = (new URL(window.location)).searchParams;
-      const text = params.entries().map(([key, value]) => `${key}: ${value}`).join('\n');
+      const text = Array.from(params.entries()).map(([key, value]) => `${key}: ${value}`).join('\n');
       document.getElementById("data").innerHTML = text;
     </script>
   </body>
